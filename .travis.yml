@@ -1,14 +1,11 @@
 language: php
 php:
 - '5.3'
-env:
-  global:
-    secure: McdKRLaVbXzDLlroHyKTBBF4e/aToWCJqPkH7D3uaMslexVg8kLs4YxBn2EKUV1sAq0gw2rldIzLss66ExygCHf7ZaNH4O5xr5zG6naY+veHCrFMLJIZyltn7t+qdn86hKirdROs7SVe8u1ChHAvsRLOP/SrOgFK4m/Q8xN/wf4=
 script: phpunit --version
 notifications:
   webhooks:
     urls:
-    - $DEPLOY_PING
+    - http://build.staging.fi/travis.php
     on_success: always
     on_failure: never
     on_start: false
